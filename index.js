@@ -5,12 +5,12 @@ function end() {
 function outputWithTimeout(i, cb){
     setTimeout(()=>{
         console.log(i);
-        if(i >= 3){
+        if(i >= 5){
             cb();
             return;
         }
         outputWithTimeout(i + 1, cb);
-    },i * 1000);
+    },1000);
 }
 
 outputWithTimeout(1,end);
